@@ -12,9 +12,10 @@ class Topic(models.Model):
 class Newspaper(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
-    publication_date = models.DateField()
-    topic = models.ManyToManyField(
+    publication_date = models.DateField(auto_now_add=True)
+    topic = models.ForeignKey(
         Topic,
+        on_delete=models.CASCADE,
         related_name="newspapers",
     )
     publishers = models.ManyToManyField(
