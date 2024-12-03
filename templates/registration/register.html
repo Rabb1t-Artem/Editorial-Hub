@@ -1,0 +1,48 @@
+{% extends 'base_login.html' %}
+{% load static %}
+
+{% block title %}Registration{% endblock %}
+
+{% block forma %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+    <div class="text-center mt-3">
+        <p>Already have an account?</p>
+        <a href="{% url 'login' %}" class="btn btn-outline-primary">Login</a>
+    </div>
+    
+    <div class="password-help d-none">
+        <small class="text-muted">
+            <ul>
+                <li>Password must contain at least 8 characters</li>
+                <li>Password cannot be too similar to your personal information</li>
+                <li>Password cannot be commonly used</li>
+                <li>Password cannot be entirely numeric</li>
+            </ul>
+        </small>
+    </div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    const passwordField = document.getElementById('id_password1');
+    const helpText = document.querySelector('.password-help');
+    
+    if (passwordField && helpText) {
+        passwordField.addEventListener('focus', () => {
+            helpText.classList.remove('d-none');
+        });
+        
+        passwordField.addEventListener('blur', () => {
+            helpText.classList.add('d-none');
+        });
+    }
+</script>
+{% endblock %}
+
+{% block footer %}{% endblock %}
+{% block rightbar %}{% endblock %}
+
