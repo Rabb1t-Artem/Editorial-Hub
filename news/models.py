@@ -11,12 +11,12 @@ class Topic(models.Model):
 
 class Newspaper(models.Model):
     title = models.CharField(max_length=200)
+    description = models.TextField(blank=True, null=True)
     content = models.TextField()
     publication_date = models.DateField(auto_now_add=True)
-    topic = models.ForeignKey(
+    topic = models.ManyToManyField(
         Topic,
-        on_delete=models.CASCADE,
-        related_name="newspapers",
+        related_name="newspapers"
     )
     publishers = models.ManyToManyField(
         settings.AUTH_USER_MODEL,
