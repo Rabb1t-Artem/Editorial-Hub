@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ newspaper.title }}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="news-detail">
+        {% if newspaper.image %}
+        <img src="{{ newspaper.image.url }}" class="news-image" alt="{{ newspaper.title }}">
+        {% endif %}
+        
+        <h1>{{ newspaper.title }}</h1>
+        
+        <div class="news-meta">
+            <p>By {{ newspaper.redactor.username }} | {{ newspaper.created_at|date:"F d, Y" }}</p>
+            <p>Topics: 
+                {% for topic in newspaper.topics.all %}
+                <span class="badge badge-primary">{{ topic.name }}</span>
+                {% endfor %}
+            </p>
+        </div>
+
+        <div class="news-content">
+            {{ newspaper.content|linebreaks }}
+        </div>
+
+        {% if newspaper.redactor == user %}
+        <div class="news-actions mt-4">
+            <a href="{% url 'news:edit' newspaper.pk %}" class="btn btn-primary">
+                <i class="fas fa-edit"></i> Edit News
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %} 

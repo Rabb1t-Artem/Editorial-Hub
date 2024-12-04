@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.db import models
+from django_resized import ResizedImageField
 
 
 class Topic(models.Model):
@@ -11,16 +12,26 @@ class Topic(models.Model):
 
 class Newspaper(models.Model):
     title = models.CharField(max_length=200)
-    description = models.TextField(blank=True, null=True)
+    description = models.CharField(max_length=100)
     content = models.TextField()
-    publication_date = models.DateField(auto_now_add=True)
-    topic = models.ManyToManyField(
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    image = ResizedImageField(
+        size=[1080, 1080],
+        upload_to='news_images/',
+        crop=['middle', 'center'],
+        quality=75,
+        force_format='JPEG',
+        help_text='Рекомендований розмір 1080x1080 пікселів'
+    )
+    topics = models.ManyToManyField(
         Topic,
         related_name="newspapers"
     )
-    publishers = models.ManyToManyField(
+    redactor = models.ForeignKey(
         settings.AUTH_USER_MODEL,
-        related_name="newspapers",
+        on_delete=models.CASCADE,
+        related_name="newspapers"
     )
 
     def __str__(self):

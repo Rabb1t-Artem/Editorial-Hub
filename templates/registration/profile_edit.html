@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Edit Profile - {{ user.username }}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="profile-container profile-form">
+        <div class="profile-header">
+            <div class="profile-avatar">
+                <img src="{{ user.profile_image.url|default:'/static/images/no-avatar.png' }}" 
+                     alt="Profile" 
+                     class="profile-img-large">
+            </div>
+            <div class="profile-info">
+                <h2>Edit Profile</h2>
+            </div>
+        </div>
+
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="profile-actions">
+                <button type="submit" class="btn btn-primary">Save Changes</button>
+                <a href="{% url 'accounts:profile' %}" class="btn btn-outline-secondary">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

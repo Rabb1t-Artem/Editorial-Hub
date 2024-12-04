@@ -3,12 +3,14 @@
   
   <div class="auth-block">
     {% if user.is_authenticated %}
+      <a href="{% url 'accounts:profile' %}">
       <div class="user-info">
         <img src="{{ user.profile_image.url|default:'/static/images/no-avatar.png' }}" 
              alt="Profile" 
              class="profile-img">
         <span class="username">{{ user.username }}</span>
       </div>
+      </a>
       <form action="{% url 'logout' %}" method="post" class="logout-form">
         {% csrf_token %}
         <button type="submit" class="btn btn-primary btn-sm">Logout</button>
@@ -24,16 +26,10 @@
   <h1 class="fh5co-logo"><a class="navbar-brand" href="#">Editorial-Hub</a></h1>
   <ul>
     <li class="active">
-      <a href="#">Home</a>
+      <a href="{% url 'news:index' %}">Home</a>
     </li>
     <li>
-      <a href="#">About</a>
-    </li>
-    <li>
-      <a href="#">Pricing</a>
-    </li>
-    <li>
-      <a href="#">Contact</a>
+      <a href="{% url 'news:my_news' %}">My News</a>
     </li>
   </ul>
   <h3 class="fh5co-lead">Connect with us</h3>

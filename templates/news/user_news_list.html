@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}My News{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12" style="display: flex; justify-content: flex-end; margin-bottom: 20px;">
+            <a href="№" class="btn btn-primary animate-box">
+                <i class="icon-plus"></i> Create New Article
+            </a>
+        </div>
+    </div>
+</div>
+
+{% for newspaper in news_list %}
+<div class="item" onclick="window.location.href='{% url 'news:newspaper' newspaper.pk %}'">
+    <div class="animate-box">
+        <img src="{{ newspaper.image.url }}" alt="Editorial Hub Image" />
+        <div class="fh5co-desc">{{ newspaper.title }}</div>
+    </div>
+</div>
+{% endfor %}
+{% endblock %} 
