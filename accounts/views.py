@@ -1,6 +1,7 @@
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, UpdateView, DetailView
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth import login
 
 from .models import Redactor
 from .forms import UserRegistrationForm, UserProfileEditForm
@@ -9,7 +10,12 @@ class UserRegisterView(CreateView):
     model = Redactor
     form_class = UserRegistrationForm
     template_name = 'registration/register.html'
-    success_url = reverse_lazy('login')
+    success_url = reverse_lazy('news:index')
+
+    def form_valid(self, form):
+        response = super().form_valid(form)
+        login(self.request, self.object)
+        return response
 
 class UserProfileView(LoginRequiredMixin, DetailView):
     model = Redactor

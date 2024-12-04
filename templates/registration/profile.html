@@ -15,29 +15,29 @@
             <div class="profile-info">
                 <h2>{{ user.username }}</h2>
                 <p class="text-muted">{{ user.email }}</p>
-                <p>Experience: {{ user.years_of_experience }} years</p>
+                <p>Досвід: {{ user.years_of_experience }} років</p>
             </div>
         </div>
 
         <div class="profile-details">
             <div class="row">
                 <div class="col-md-6">
-                    <h4>Personal Information</h4>
-                    <p><strong>First Name:</strong> {{ user.first_name|default:"Not specified" }}</p>
-                    <p><strong>Last Name:</strong> {{ user.last_name|default:"Not specified" }}</p>
+                    <h4>Особисті дані</h4>
+                    <p><strong>Ім'я:</strong> {{ user.first_name|default:"Не вказано" }}</p>
+                    <p><strong>Прізвище:</strong> {{ user.last_name|default:"Не вказано" }}</p>
                     <p><strong>Email:</strong> {{ user.email }}</p>
                 </div>
                 <div class="col-md-6">
-                    <h4>Account Information</h4>
-                    <p><strong>Username:</strong> {{ user.username }}</p>
-                    <p><strong>Joined:</strong> {{ user.date_joined|date:"F d, Y" }}</p>
-                    <p><strong>Years of Experience:</strong> {{ user.years_of_experience }}</p>
+                    <h4>Інформація про акаунт</h4>
+                    <p><strong>Ім'я користувача:</strong> {{ user.username }}</p>
+                    <p><strong>Дата приєднання:</strong> {{ user.date_joined|date:"F d, Y" }}</p>
+                    <p><strong>Роки досвіду:</strong> {{ user.years_of_experience }}</p>
                 </div>
             </div>
         </div>
 
         <div class="profile-actions">
-            <a href="{% url 'accounts:profile_edit' %}" class="btn btn-primary">Edit Profile</a>
+            <a href="{% url 'accounts:profile_edit' %}" class="btn btn-primary">Редагувати профіль</a>
         </div>
     </div>
 </div>

@@ -29,8 +29,8 @@
 	<link rel="shortcut icon" href="favicon.ico">
 
 	<!-- Google Webfonts -->
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100,500' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css"> 
 
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="{% static 'css/animate.css' %}">
@@ -50,8 +50,6 @@
 	<!--[endif]-->
 	<!-- Додайте цей рядок після інших CSS файлів -->
 	<link rel="stylesheet" href="{% static 'css/header_styles.css' %}">
-    
-	<script src="https://unpkg.com/htmx.org@1.9.10"></script>
 
 	</head>
 	<body>
@@ -68,8 +66,9 @@
 								<img src="{% static 'images/logo_title.png' %}" alt="Editorial Hub Logo" class="header-logo">
 							</a>
 						</div>
-						<a href="#" class="fh5co-menu-btn js-fh5co-menu-btn">Menu <i class="icon-menu"></i></a>
+						<a href="#" class="fh5co-menu-btn js-fh5co-menu-btn">Меню <i class="icon-menu"></i></a>
 					</div>
+          <h2 class="navbar-brand">{%block page_title%}{%endblock page_title%}</h2>
 				</div>
 			</div>
 		</div>
@@ -100,7 +99,7 @@
 						<a href="#"><i class="icon-dribbble"></i></a>
 						<a href="#"><i class="icon-youtube"></i></a>
 					</p>
-					<p><small>&copy; Editorial-Hub. All Rights Reserved.</small></p>
+					<p><small>&copy; Editorial-Hub. Всі права захищено.</small></p>
 				</div>
 			</div>
 		</div>

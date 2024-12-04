@@ -13,12 +13,12 @@
       </a>
       <form action="{% url 'logout' %}" method="post" class="logout-form">
         {% csrf_token %}
-        <button type="submit" class="btn btn-primary btn-sm">Logout</button>
+        <button type="submit" class="btn btn-primary btn-sm">Вийти</button>
       </form>
     {% else %}
       <div class="auth-buttons">
-        <a href="{% url 'login' %}" class="btn btn-primary btn-sm">Login</a>
-        <a href="{% url 'accounts:register' %}" class="btn btn-primary btn-sm">Register</a>
+        <a href="{% url 'login' %}" class="btn btn-primary btn-sm">Увійти</a>
+        <a href="{% url 'accounts:register' %}" class="btn btn-primary btn-sm">Реєстрація</a>
       </div>
     {% endif %}
   </div>
@@ -26,13 +26,13 @@
   <h1 class="fh5co-logo"><a class="navbar-brand" href="#">Editorial-Hub</a></h1>
   <ul>
     <li class="active">
-      <a href="{% url 'news:index' %}">Home</a>
+      <a href="{% url 'news:index' %}">Додому</a>
     </li>
     <li>
-      <a href="{% url 'news:my_news' %}">My News</a>
+      <a href="{% url 'news:my_news' %}">Мої Статті</a>
     </li>
     <li>
-      <a href="{% url 'news:topic-list' %}">Topics</a>
+      <a href="{% url 'news:topic-list' %}">Теми</a>
     </li>
   </ul>
   <h3 class="fh5co-lead">Connect with us</h3>

@@ -7,7 +7,7 @@
 <div class="container">
     <div class="news-detail">
         {% if newspaper.image %}
-        <img src="{{ newspaper.image.url }}" class="news-image" alt="{{ newspaper.title }}">
+        <img src="{{ newspaper.image.url }}" class="news-image" alt="Зображення статті">
         {% endif %}
         
         <h1>{{ newspaper.title }}</h1>
@@ -28,7 +28,7 @@
         {% if newspaper.redactor == user %}
         <div class="news-actions mt-4">
             <a href="{% url 'news:edit' newspaper.pk %}" class="btn btn-primary">
-                <i class="fas fa-edit"></i> Edit News
+                <i class="fas fa-edit"></i> Редагувати новину
             </a>
         </div>
         {% endif %}

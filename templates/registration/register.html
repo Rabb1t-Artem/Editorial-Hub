@@ -7,20 +7,20 @@
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="btn btn-primary">Register</button>
+        <button type="submit" class="btn btn-primary">Реєстрація</button>
     </form>
     <div class="text-center mt-3">
-        <p>Already have an account?</p>
-        <a href="{% url 'login' %}" class="btn btn-outline-primary">Login</a>
+        <p>Вже є акаунт?</p>
+        <a href="{% url 'login' %}" class="btn btn-outline-primary">Увійти</a>
     </div>
     
     <div class="password-help d-none">
         <small class="text-muted">
             <ul>
-                <li>Password must contain at least 8 characters</li>
-                <li>Password cannot be too similar to your personal information</li>
-                <li>Password cannot be commonly used</li>
-                <li>Password cannot be entirely numeric</li>
+                <li>Пароль має містити принаймні 8 символів</li>
+                <li>Пароль не може бути занадто схожим на вашу персональну інформацію</li>
+                <li>Пароль не може бути занадто загальним</li>
+                <li>Пароль не може бути цілком числовим</li>
             </ul>
         </small>
     </div>

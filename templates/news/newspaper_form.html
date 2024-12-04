@@ -14,7 +14,7 @@
         {% endif %}
         
         <h1 class="fh5co-heading-colored">
-            {% if form.instance.pk %}Edit News{% else %}Create News{% endif %}
+            {% if form.instance.pk %}Редагувати новину{% else %}Створити новину{% endif %}
         </h1>
 
         <form method="post" enctype="multipart/form-data">
@@ -27,10 +27,10 @@
             <div class="news-actions mt-4">
                 <button type="submit" class="btn btn-primary">
                     <i class="icon-check"></i> 
-                    {% if form.instance.pk %}Save Changes{% else %}Create News{% endif %}
+                    {% if form.instance.pk %}Зберегти зміни{% else %}Створити новину{% endif %}
                 </button>
                 <a href="{% url 'news:my_news' %}" class="btn btn-outline-secondary">
-                    <i class="icon-close"></i> Cancel
+                    <i class="icon-close"></i> Скасувати
                 </a>
             </div>
         </form>

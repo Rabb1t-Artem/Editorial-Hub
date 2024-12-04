@@ -7,11 +7,11 @@
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="btn btn-primary">Login</button>
+        <button type="submit" class="btn btn-primary">Увійти</button>
     </form>
     <div class="text-center mt-3">
-        <p>Don't have an account?</p>
-        <a href="{% url 'accounts:register' %}" class="btn btn-outline-primary">Register</a>
+        <p>Не маєте акаунт?</p>
+        <a href="{% url 'accounts:register' %}" class="btn btn-outline-primary">Реєстрація</a>
     </div>
 {% endblock forma %}
 
