@@ -8343,3 +8343,20 @@ a > img.fh5co-align-center {
         left: 20px;
     }
 }
+
+
+/* Topics filter */
+.topics-filter {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.topics-list {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.form-check {
+    margin: 5px 0;
+}

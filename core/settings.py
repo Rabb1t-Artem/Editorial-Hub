@@ -41,7 +41,11 @@ INSTALLED_APPS = [
     
     # 3rd-party apps
     "bootstrap4",
-    
+    "crispy_forms",
+    "crispy_bootstrap4",
+    "django_resized",
+    "widget_tweaks",
+    "django_htmx",
     
     
     # custom apps
@@ -57,6 +61,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    'django_htmx.middleware.HtmxMiddleware',
 ]
 
 ROOT_URLCONF = "core.urls"
@@ -146,5 +151,4 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = BASE_DIR / 'media'
 
-
-
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

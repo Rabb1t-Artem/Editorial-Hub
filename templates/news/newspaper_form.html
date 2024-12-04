@@ -8,17 +8,30 @@
 
 {% block content %}
 <div class="container">
-    <div class="form-container">
-        <h2>{% if form.instance.pk %}Edit News{% else %}Create News{% endif %}</h2>
+    <div class="news-detail">
+        {% if form.instance.image %}
+        <img src="{{ form.instance.image.url }}" class="news-image" alt="Preview">
+        {% endif %}
         
+        <h1 class="fh5co-heading-colored">
+            {% if form.instance.pk %}Edit News{% else %}Create News{% endif %}
+        </h1>
+
         <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
-            {{ form.as_p }}
-            <div class="form-actions">
+            
+            <div class="news-content">
+                {{ form|crispy }}
+            </div>
+
+            <div class="news-actions mt-4">
                 <button type="submit" class="btn btn-primary">
+                    <i class="icon-check"></i> 
                     {% if form.instance.pk %}Save Changes{% else %}Create News{% endif %}
                 </button>
-                <a href="{% url 'news:index' %}" class="btn btn-outline-secondary">Cancel</a>
+                <a href="{% url 'news:my_news' %}" class="btn btn-outline-secondary">
+                    <i class="icon-close"></i> Cancel
+                </a>
             </div>
         </form>
     </div>

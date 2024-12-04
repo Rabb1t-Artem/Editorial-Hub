@@ -4,13 +4,21 @@
 {% block title %}My News{% endblock %}
 
 {% block content %}
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-12" style="display: flex; justify-content: flex-end; margin-bottom: 20px;">
-            <a href="№" class="btn btn-primary animate-box">
-                <i class="icon-plus"></i> Create New Article
-            </a>
-        </div>
+<div class="fh5co-narrow-content animate-box" data-animate-effect="fadeInLeft">
+    <div style="text-align: left; margin-bottom: 20px;">
+        <a href="{% url 'news:create' %}" class="btn btn-primary">
+            <i class="icon-plus"></i> Create New Article
+        </a>
+    </div>
+    
+    <div class="search-form" style="max-width: 300px; margin: 0 auto 20px;">
+        <form method="get">
+            <input type="text" 
+                   name="q" 
+                   class="form-control" 
+                   placeholder="Пошук в моїх статтях..." 
+                   value="{{ request.GET.q }}">
+        </form>
     </div>
 </div>
 
