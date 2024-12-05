@@ -1,5 +1,13 @@
 {% extends 'base.html' %}
 
+{% block title %}
+  Topics
+{% endblock %}
+
+{% block page_title %}
+  Теми
+{% endblock %}
+
 {% block content %}
   <div class="item" style="cursor: pointer; background-color: #ef5353; color: #fff;" onclick="window.location.href='{% url 'news:topic-create' %}'">
     <br />

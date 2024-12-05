@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
 
+{% block title %}
+  {% if form.instance.pk %}Редагувати тему{% else %}Створити нову тему{% endif %}
+{% endblock %}
+
 {% block content %}
 <div class="container">
     <div class="row justify-content-center">
