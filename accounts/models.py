@@ -9,15 +9,15 @@ class Redactor(AbstractUser):
     email = models.EmailField(max_length=255, unique=True)
     profile_image = ResizedImageField(
         size=[512, 512],
-        upload_to='profile_images/',
-        crop=['middle', 'center'],
+        upload_to="profile_images/",
+        crop=["middle", "center"],
         quality=75,
-        force_format='WEBP',
-        default='profile_images/no-avatar.png',
-        blank=True
+        force_format="WEBP",
+        default="profile_images/no-avatar.png",
+        blank=True,
     )
-    #aljdhfkl
-    
+    # aljdhfkl
+
     class Meta:
         db_table = "redactors"
 

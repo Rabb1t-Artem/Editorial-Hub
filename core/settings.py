@@ -38,15 +38,12 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    
     # 3rd-party apps
     "bootstrap4",
     "crispy_forms",
     "crispy_bootstrap4",
     "django_resized",
     "widget_tweaks",
-    
-    
     # custom apps
     "accounts",
     "news",
@@ -67,7 +64,7 @@ ROOT_URLCONF = "core.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [ BASE_DIR / "templates" ],
+        "DIRS": [BASE_DIR / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -139,16 +136,16 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-#added settings
+# added settings
 
 AUTH_USER_MODEL = "accounts.Redactor"
 
-LOGIN_REDIRECT_URL = 'news:index'
+LOGIN_REDIRECT_URL = "news:index"
 
-LOGOUT_REDIRECT_URL = 'news:index'
+LOGOUT_REDIRECT_URL = "news:index"
 
-MEDIA_URL = '/media/'
+MEDIA_URL = "/media/"
 
-MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_ROOT = BASE_DIR / "media"
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_TEMPLATE_PACK = "bootstrap4"

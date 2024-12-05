@@ -18,22 +18,17 @@ class Newspaper(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     image = ResizedImageField(
         size=[1080, 1080],
-        upload_to='news_images/',
+        upload_to="news_images/",
         crop=False,
         quality=75,
-        force_format='WEBP',
-        help_text='Будьте уважні, зображення буде масштабовано автоматично'
+        force_format="WEBP",
+        help_text="Будьте уважні, зображення буде масштабовано автоматично",
     )
-    topics = models.ManyToManyField(
-        Topic,
-        related_name="newspapers"
-    )
+    topics = models.ManyToManyField(Topic, related_name="newspapers")
     redactor = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
-        on_delete=models.CASCADE,
-        related_name="newspapers"
+        settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="newspapers"
     )
-    
+
     class Meta:
         ordering = ["-updated_at", "-created_at"]
 

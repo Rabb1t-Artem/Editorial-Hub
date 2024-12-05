@@ -14,22 +14,21 @@ class IndexView(generic.ListView):
 
     def get_queryset(self):
         queryset = Newspaper.objects.all()
-        q = self.request.GET.get('q')
+        q = self.request.GET.get("q")
         if q:
             queryset = queryset.filter(
-                Q(title__icontains=q) |
-                Q(description__icontains=q)
+                Q(title__icontains=q) | Q(description__icontains=q)
             )
         return queryset
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['search_form'] = NewsSearchForm(self.request.GET)
+        context["search_form"] = NewsSearchForm(self.request.GET)
         return context
 
 
+# --------------------NewsPaper------------------------------------------------
 
-#--------------------NewsPaper------------------------------------------------
 
 class NewsPaperDetail(generic.DetailView):
     model = Newspaper
@@ -43,11 +42,10 @@ class UserNewsList(LoginRequiredMixin, generic.ListView):
 
     def get_queryset(self):
         queryset = Newspaper.objects.filter(redactor=self.request.user)
-        q = self.request.GET.get('q')
+        q = self.request.GET.get("q")
         if q:
             queryset = queryset.filter(
-                Q(title__icontains=q) |
-                Q(description__icontains=q)
+                Q(title__icontains=q) | Q(description__icontains=q)
             )
         return queryset
 
@@ -76,7 +74,7 @@ class NewsPaperDelete(LoginRequiredMixin, generic.DeleteView):
     success_url = reverse_lazy("news:my_news")
 
 
-#--------------------Topics---------------------------------------------------
+# --------------------Topics---------------------------------------------------
 
 
 class TopicList(generic.ListView):
@@ -89,19 +87,19 @@ class TopicDetail(generic.DetailView):
     model = Topic
     template_name = "news/topic_detail.html"
     context_object_name = "topic"
-    queryset = Topic.objects.all().prefetch_related('newspapers')
+    queryset = Topic.objects.all().prefetch_related("newspapers")
 
 
 class TopicCreate(LoginRequiredMixin, generic.CreateView):
     model = Topic
-    fields = ['name']
+    fields = ["name"]
     template_name = "news/topic_form.html"
     success_url = reverse_lazy("news:topic-list")
 
 
 class TopicUpdate(LoginRequiredMixin, generic.UpdateView):
     model = Topic
-    fields = ['name']
+    fields = ["name"]
     template_name = "news/topic_form.html"
     success_url = reverse_lazy("news:topic-list")
 
