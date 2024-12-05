@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Увійти</button>
+    </form>
+    <div class="text-center mt-3">
+        <p>Не маєте акаунт?</p>
+        <a href="{% url 'accounts:register' %}" class="btn btn-outline-primary">Реєстрація</a>
+    </div>
+{% endblock %}
+
+{% block footer %}{% endblock %}
+{% block rightbar %}{% endblock %}
+
