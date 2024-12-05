@@ -71,6 +71,48 @@ class NewsViewsTest(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, "Test News")
 
+    def test_search_news_with_multiple_params(self):
+        # Створюємо додаткові новини для тестування
+        topic2 = Topic.objects.create(name="Another Topic")
+        image_path = os.path.join("media", "news_images", "culture.jpeg")
+        
+        with open(image_path, "rb") as img:
+            newspaper2 = Newspaper.objects.create(
+                title="Different News",
+                description="Test Description",
+                redactor=self.user,
+                image=SimpleUploadedFile(
+                    name="culture.jpeg",
+                    content=img.read(),
+                    content_type="image/jpeg"
+                )
+            )
+            newspaper2.topics.add(topic2)
+
+        # Тест пошуку за текстом
+        response = self.client.get(
+            reverse("news:index"),
+            {"q": "Test"}
+        )
+        self.assertContains(response, "Test News")
+        self.assertNotContains(response, "Different News")
+
+        # Тест пошуку за темами
+        response = self.client.get(
+            reverse("news:index"),
+            {"topics": [self.topic.id]}
+        )
+        self.assertContains(response, "Test News")
+        self.assertNotContains(response, "Different News")
+
+        # Тест комбінованого пошуку
+        response = self.client.get(
+            reverse("news:index"),
+            {"q": "Test", "topics": [self.topic.id]}
+        )
+        self.assertContains(response, "Test News")
+        self.assertNotContains(response, "Different News")
+
 
 class AccountsViewsTest(TestCase):
     def setUp(self):

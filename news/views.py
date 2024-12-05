@@ -14,11 +14,21 @@ class IndexView(generic.ListView):
 
     def get_queryset(self):
         queryset = Newspaper.objects.all()
-        q = self.request.GET.get("q")
-        if q:
-            queryset = queryset.filter(
-                Q(title__icontains=q) | Q(description__icontains=q)
-            )
+        form = NewsSearchForm(self.request.GET)
+        
+        if form.is_valid():
+            q = form.cleaned_data.get('q')
+            topics = form.cleaned_data.get('topics')
+            
+            if q:
+                queryset = queryset.filter(
+                    Q(title__icontains=q) | 
+                    Q(description__icontains=q)
+                )
+            
+            if topics:
+                queryset = queryset.filter(topics__in=topics).distinct()
+                
         return queryset
 
     def get_context_data(self, **kwargs):

@@ -38,12 +38,26 @@ class NewspaperFormTest(TestCase):
 
 
 class NewsSearchFormTest(TestCase):
+    def setUp(self):
+        self.topic = Topic.objects.create(name="Test Topic")
+
     def test_search_form_empty(self):
         form = NewsSearchForm(data={})
-        self.assertTrue(form.is_valid())  # Форма валідна навіть без даних
+        self.assertTrue(form.is_valid())
 
     def test_search_form_with_query(self):
         form = NewsSearchForm(data={"q": "test search"})
+        self.assertTrue(form.is_valid())
+
+    def test_search_form_with_topics(self):
+        form = NewsSearchForm(data={"topics": [self.topic.id]})
+        self.assertTrue(form.is_valid())
+
+    def test_search_form_with_all_params(self):
+        form = NewsSearchForm(data={
+            "q": "test search",
+            "topics": [self.topic.id]
+        })
         self.assertTrue(form.is_valid())
 
 

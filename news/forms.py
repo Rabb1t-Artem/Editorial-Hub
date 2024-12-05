@@ -1,6 +1,5 @@
 from django import forms
-from django.forms.widgets import ClearableFileInput, CheckboxSelectMultiple
-from django.utils.safestring import mark_safe
+from django.forms.widgets import CheckboxSelectMultiple
 from .models import Newspaper, Topic
 
 

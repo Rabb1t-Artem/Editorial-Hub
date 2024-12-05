@@ -15,6 +15,7 @@
         <div class="news-meta">
             <p>By {{ newspaper.redactor.username }} | {{ newspaper.created_at|date:"F d, Y" }}</p>
             <p>Last updated: {{ newspaper.updated_at|date:"F d, Y" }}</p>
+            <p><strong>{{newspaper.description}}</strong></p>
             <p>Topics: 
                 {% for topic in newspaper.topics.all %}
                 <span class="badge badge-primary">{{ topic.name }}</span>

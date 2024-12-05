@@ -3,6 +3,10 @@
 
 {% block title %}Profile - {{ user.username }}{% endblock %}
 
+{% block page_title %}
+  Профіль
+{% endblock %}
+
 {% block content %}
 <div class="container">
     <div class="profile-container">
@@ -32,6 +36,7 @@
                     <p><strong>Ім'я користувача:</strong> {{ user.username }}</p>
                     <p><strong>Дата приєднання:</strong> {{ user.date_joined|date:"F d, Y" }}</p>
                     <p><strong>Роки досвіду:</strong> {{ user.years_of_experience }}</p>
+                    <p><strong>Кількість статей:</strong> {{ user.articles.count|default:"0" }}</p>
                 </div>
             </div>
         </div>
