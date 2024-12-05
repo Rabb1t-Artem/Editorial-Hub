@@ -14,6 +14,7 @@
         
         <div class="news-meta">
             <p>By {{ newspaper.redactor.username }} | {{ newspaper.created_at|date:"F d, Y" }}</p>
+            <p>Last updated: {{ newspaper.updated_at|date:"F d, Y" }}</p>
             <p>Topics: 
                 {% for topic in newspaper.topics.all %}
                 <span class="badge badge-primary">{{ topic.name }}</span>
@@ -27,8 +28,11 @@
 
         {% if newspaper.redactor == user %}
         <div class="news-actions mt-4">
-            <a href="{% url 'news:edit' newspaper.pk %}" class="btn btn-primary">
+            <a href="{% url 'news:edit' newspaper.pk %}" class="btn btn-danger">
                 <i class="fas fa-edit"></i> Редагувати новину
+            </a>
+            <a href="{% url 'news:delete' newspaper.pk %}" class="btn btn-danger">
+                <i class="fas fa-trash"></i> Видалити новину
             </a>
         </div>
         {% endif %}

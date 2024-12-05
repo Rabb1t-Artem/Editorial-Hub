@@ -10,6 +10,8 @@ from .views import (
     TopicDetail,
     TopicCreate,
     TopicUpdate,
+    NewsPaperDelete,
+    TopicDelete,
 )
 
 urlpatterns = [
@@ -19,10 +21,12 @@ urlpatterns = [
     path("my-news/", UserNewsList.as_view(), name="my_news"),
     path("newspaper/create/", NewsPaperCreate.as_view(), name="create"),
     path("newspaper/update/<int:pk>/", NewsPaperUpdate.as_view(), name="update"),
+    path("newspaper/delete/<int:pk>/", NewsPaperDelete.as_view(), name="delete"),
     path('topics/', TopicList.as_view(), name='topic-list'),
     path('topic/<int:pk>/', TopicDetail.as_view(), name='topic-detail'),
     path('topic/create/', TopicCreate.as_view(), name='topic-create'),
     path('topic/update/<int:pk>/', TopicUpdate.as_view(), name='topic-update'),
+    path('topic/delete/<int:pk>/', TopicDelete.as_view(), name='topic-delete'),
 ]
 
 app_name = "news"

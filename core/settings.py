@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     "crispy_bootstrap4",
     "django_resized",
     "widget_tweaks",
-    "django_htmx",
     
     
     # custom apps
@@ -61,7 +60,6 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    'django_htmx.middleware.HtmxMiddleware',
 ]
 
 ROOT_URLCONF = "core.urls"
@@ -140,6 +138,8 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+#added settings
 
 AUTH_USER_MODEL = "accounts.Redactor"
 

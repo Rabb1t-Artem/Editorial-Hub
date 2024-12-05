@@ -19,10 +19,10 @@ class Newspaper(models.Model):
     image = ResizedImageField(
         size=[1080, 1080],
         upload_to='news_images/',
-        crop=['middle', 'center'],
+        crop=False,
         quality=75,
-        force_format='JPEG',
-        help_text='Рекомендований розмір 1080x1080 пікселів'
+        force_format='WEBP',
+        help_text='Будьте уважні, зображення буде масштабовано автоматично'
     )
     topics = models.ManyToManyField(
         Topic,
@@ -33,6 +33,9 @@ class Newspaper(models.Model):
         on_delete=models.CASCADE,
         related_name="newspapers"
     )
+    
+    class Meta:
+        ordering = ["-updated_at", "-created_at"]
 
     def __str__(self):
         return self.title

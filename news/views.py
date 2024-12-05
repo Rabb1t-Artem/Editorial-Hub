@@ -1,8 +1,6 @@
 from django.urls import reverse_lazy
 from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.shortcuts import render
-from django.http import HttpResponse
 from django.db.models import Q
 
 from news.models import Newspaper, Topic
@@ -72,6 +70,12 @@ class NewsPaperUpdate(LoginRequiredMixin, generic.UpdateView):
     success_url = reverse_lazy("news:my_news")
 
 
+class NewsPaperDelete(LoginRequiredMixin, generic.DeleteView):
+    model = Newspaper
+    template_name = "news/newspaper_confirm_delete.html"
+    success_url = reverse_lazy("news:my_news")
+
+
 #--------------------Topics---------------------------------------------------
 
 
@@ -99,4 +103,10 @@ class TopicUpdate(LoginRequiredMixin, generic.UpdateView):
     model = Topic
     fields = ['name']
     template_name = "news/topic_form.html"
+    success_url = reverse_lazy("news:topic-list")
+
+
+class TopicDelete(LoginRequiredMixin, generic.DeleteView):
+    model = Topic
+    template_name = "news/topic_confirm_delete.html"
     success_url = reverse_lazy("news:topic-list")

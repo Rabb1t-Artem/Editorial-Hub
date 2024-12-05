@@ -16,6 +16,7 @@ class Redactor(AbstractUser):
         default='profile_images/no-avatar.png',
         blank=True
     )
+    #aljdhfkl
     
     class Meta:
         db_table = "redactors"

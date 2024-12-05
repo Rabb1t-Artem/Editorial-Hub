@@ -2,27 +2,36 @@
 {% load static %}
 
 {% block page_title %}
-    News
-{% endblock page_title %}
+  Останні новини
+{% endblock %}
 
 {% block content %}
-<div class="search-container" style="margin-bottom: 20px;">
-    <form method="get" class="search-form">
-        <input type="text" 
-               name="q" 
-               class="form-control" 
-               placeholder="Пошук статей..." 
-               value="{{ request.GET.q }}"
-               style="max-width: 300px; margin: 0 auto;">
-    </form>
-</div>
 
-{% for newspaper in news %}
-<div class="item" onclick="window.location.href='{% url 'news:newspaper' newspaper.pk %}'">
-    <div class="animate-box">
+  <div class="fh5co-narrow-content animate-box" data-animate-effect="fadeInLeft">
+    {% if user.is_authenticated %}
+    <div style="text-align: left; margin-bottom: 20px;">
+      <a href="{% url 'news:create' %}" class="btn btn-primary"><i class="icon-plus"></i> Створити статтю</a>
+    </div>
+    {% endif %}
+
+    <div class="search-form" style="max-width: 300px; margin: 0 auto 20px;">
+      <form method="get">
+        <input type="text" name="q" class="form-control" placeholder="Пошук у моїх статтях..." value="{{ request.GET.q }}" />
+      </form>
+    </div>
+  </div>
+
+  {% for newspaper in news %}
+    <div class="item" onclick="window.location.href='{% url 'news:newspaper' newspaper.pk %}'">
+      <div class="animate-box">
         <img src="{{ newspaper.image.url }}" alt="Editorial Hub Image" />
         <div class="fh5co-desc">{{ newspaper.title }}</div>
+        <div class="fh5co-desc">
+          {% for topic in newspaper.topics.all %}
+            <a href="{% url 'news:topic-detail' topic.pk %}"><span class="badge badge-primary">{{ topic.name }}</span></a>
+          {% endfor %}
+        </div>
+      </div>
     </div>
-</div>
-{% endfor %}
+  {% endfor %}
 {% endblock %}

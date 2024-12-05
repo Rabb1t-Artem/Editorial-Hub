@@ -1,48 +1,59 @@
-{% extends 'base_login.html' %}
+{% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Registration{% endblock %}
+{% block title %}
+  Registration
+{% endblock %}
 
-{% block forma %}
-    <form method="post">
+{% block content %}
+  <div class="container">
+    <div class="news-detail">
+      <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="btn btn-primary">Реєстрація</button>
-    </form>
-    <div class="text-center mt-3">
+      </form>
+      <div class="text-center mt-3">
         <p>Вже є акаунт?</p>
         <a href="{% url 'login' %}" class="btn btn-outline-primary">Увійти</a>
-    </div>
-    
-    <div class="password-help d-none">
+      </div>
+
+      <div class="password-help d-none">
         <small class="text-muted">
-            <ul>
-                <li>Пароль має містити принаймні 8 символів</li>
-                <li>Пароль не може бути занадто схожим на вашу персональну інформацію</li>
-                <li>Пароль не може бути занадто загальним</li>
-                <li>Пароль не може бути цілком числовим</li>
-            </ul>
+          <ul>
+            <li>Пароль має містити принаймні 8 символів</li>
+            <li>Пароль не може бути занадто схожим на вашу персональну інформацію</li>
+            <li>Пароль не може бути занадто загальним</li>
+            <li>Пароль не може бути цілком числовим</li>
+          </ul>
         </small>
+      </div>
     </div>
+  </div>
 {% endblock %}
 
 {% block extra_js %}
-<script>
-    const passwordField = document.getElementById('id_password1');
-    const helpText = document.querySelector('.password-help');
+  <script>
+    const passwordField = document.getElementById('id_password1')
+    const helpText = document.querySelector('.password-help')
     
     if (passwordField && helpText) {
-        passwordField.addEventListener('focus', () => {
-            helpText.classList.remove('d-none');
-        });
-        
-        passwordField.addEventListener('blur', () => {
-            helpText.classList.add('d-none');
-        });
+      // Показуємо підказки тільки коли є помилки валідації
+      const form = document.getElementById('registration-form')
+      const hasErrors = form.querySelector('.alert-danger')
+    
+      if (hasErrors) {
+        helpText.classList.remove('d-none')
+      }
+    
+      passwordField.addEventListener('invalid', () => {
+        helpText.classList.remove('d-none')
+      })
     }
-</script>
+  </script>
 {% endblock %}
 
-{% block footer %}{% endblock %}
-{% block rightbar %}{% endblock %}
-
+{% block footer %}
+{% endblock %}
+{% block rightbar %}
+{% endblock %}

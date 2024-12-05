@@ -1,16 +1,18 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="item" style="cursor: pointer; background-color: #ef5353; color: #fff;" onclick="window.location.href='{% url 'news:topic-create' %}'">
-    <br>
-    <div style="text-align: center;" class="animate-box">Create New Topic</div>
-    <br>
-</div>
-{% for topic in topics %}
-<div class="item" onclick="window.location.href='{% url 'news:topic-detail' topic.pk %}'">
-    <br>
-    <div style="text-align: center;" class="animate-box">{{ topic.name }}</div>
-    <br>
-</div>
-{% endfor %}
+  <div class="item" style="cursor: pointer; background-color: #ef5353; color: #fff;" onclick="window.location.href='{% url 'news:topic-create' %}'">
+    <br />
+    <div style="text-align: center;" class="animate-box">
+      <i class="icon-plus"></i>Створити нову тему
+    </div>
+    <br />
+  </div>
+  {% for topic in topics %}
+    <div class="item" onclick="window.location.href='{% url 'news:topic-detail' topic.pk %}'">
+      <br />
+      <div style="text-align: center;" class="animate-box">{{ topic.name }}</div>
+      <br />
+    </div>
+  {% endfor %}
 {% endblock %}

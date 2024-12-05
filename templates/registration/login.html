@@ -1,9 +1,9 @@
-{% extends 'base_login.html' %}
+{% extends 'base.html' %}
 {% load static %}
 
 {% block title %}Login{% endblock %}
 
-{% block forma %}
+{% block content %}
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
@@ -13,9 +13,8 @@
         <p>Не маєте акаунт?</p>
         <a href="{% url 'accounts:register' %}" class="btn btn-outline-primary">Реєстрація</a>
     </div>
-{% endblock forma %}
+{% endblock %}
 
 {% block footer %}{% endblock %}
-
 {% block rightbar %}{% endblock %}
 
