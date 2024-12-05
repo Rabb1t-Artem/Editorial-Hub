@@ -86,3 +86,15 @@ python manage.py runserver
 ```bash
 python manage.py test tests/
 ```
+## 📄 Тестовий користувач
+```
+username: test
+password: 1234tesT
+```
+
+## 🎇 Скріншоти
+![alt text](<Screenshot 2024-12-05 214407.png>)
+![alt text](<Screenshot 2024-12-05 214416.png>)
+![alt text](<Screenshot 2024-12-06 002500.png>)
+![alt text](<Screenshot 2024-12-06 001947.png>)
+![alt text](<Screenshot 2024-12-06 002009.png>)
