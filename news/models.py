@@ -5,6 +5,9 @@ from django_resized import ResizedImageField
 
 class Topic(models.Model):
     name = models.CharField(max_length=100)
+    
+    class Meta:
+        app_label = "news"
 
     def __str__(self):
         return self.name
