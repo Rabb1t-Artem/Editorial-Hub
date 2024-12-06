@@ -59,7 +59,7 @@ MIDDLEWARE = [
     
 ]
 
-ROOT_URLCONF = "core.settings.urls"
+ROOT_URLCONF = "core.settings"
 
 TEMPLATES = [
     {
