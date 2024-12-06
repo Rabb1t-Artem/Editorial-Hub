@@ -35,3 +35,4 @@ soupsieve==2.6
 sqlparse==0.5.1
 tomli==2.0.2
 tzdata==2024.2
+whitenoise==6.8.2
