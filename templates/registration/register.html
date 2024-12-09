@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %}
+  Registration
+{% endblock %}
+
+{% block page_title %}
+  Registration
+{% endblock %}
+
+{% block content %}
+  <div class="text-center mt-3">
+    <form method="post">
+      {% csrf_token %}
+      {{ form|crispy }}
+      <button type="submit" class="btn btn-primary">Реєстрація</button>
+    </form>
+    <div class="text-center mt-3">
+      <p>Вже є акаунт?</p>
+      <a href="{% url 'login' %}" class="btn btn-outline-primary">Увійти</a>
+    </div>
+  </div>
+{% endblock %}

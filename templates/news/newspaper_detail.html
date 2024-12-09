@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ newspaper.title }}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="news-detail">
+        {% if newspaper.image %}
+        <img src="{{ newspaper.image.url }}" class="news-image" alt="Зображення статті">
+        {% endif %}
+        
+        <h1>{{ newspaper.title }}</h1>
+        
+        <div class="news-meta">
+            <p>By {{ newspaper.redactor.username }} | {{ newspaper.created_at|date:"F d, Y" }}</p>
+            <p>Last updated: {{ newspaper.updated_at|date:"F d, Y" }}</p>
+            <p><strong>{{newspaper.description}}</strong></p>
+            <p>Topics: 
+                {% for topic in newspaper.topics.all %}
+                <span class="badge badge-primary">{{ topic.name }}</span>
+                {% endfor %}
+            </p>
+        </div>
+
+        <div class="news-content">
+            {{ newspaper.content|linebreaks }}
+        </div>
+
+        {% if newspaper.redactor == user %}
+        <div class="news-actions mt-4">
+            <a href="{% url 'news:edit' newspaper.pk %}" class="btn btn-danger">
+                <i class="fas fa-edit"></i> Редагувати новину
+            </a>
+            <a href="{% url 'news:delete' newspaper.pk %}" class="btn btn-danger">
+                <i class="fas fa-trash"></i> Видалити новину
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %} 
