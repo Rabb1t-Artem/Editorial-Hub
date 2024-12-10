@@ -145,10 +145,6 @@ LOGIN_REDIRECT_URL = "news:index"
 
 LOGOUT_REDIRECT_URL = "news:index"
 
-MEDIA_URL = "/media/"
-
-MEDIA_ROOT = BASE_DIR / "media"
-
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 INTERNAL_IPS = [
@@ -160,7 +156,7 @@ MEDIA_URL = "/media/"
 
 MEDIA_ROOT = BASE_DIR / "media"
 
-# Whitenoise для статичних файлів
+# Whitenoise for static files
 MIDDLEWARE.insert(1, "whitenoise.middleware.WhiteNoiseMiddleware")
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"

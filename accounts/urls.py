@@ -1,4 +1,5 @@
 from django.urls import path
+
 from .views import UserRegisterView, UserProfileView, UserProfileEditView
 
 app_name = "accounts"

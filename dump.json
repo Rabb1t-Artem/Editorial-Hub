@@ -3,51 +3,51 @@
     "model": "news.topic",
     "pk": 1,
     "fields": {
-        "name": "Технології"
+        "name": "РўРµС…РЅРѕР»РѕРіС–С—"
     }
 },
 {
     "model": "news.topic",
     "pk": 2,
     "fields": {
-        "name": "Спорт"
+        "name": "РЎРїРѕСЂС‚"
     }
 },
 {
     "model": "news.topic",
     "pk": 3,
     "fields": {
-        "name": "Політика"
+        "name": "РџРѕР»С–С‚РёРєР°"
     }
 },
 {
     "model": "news.topic",
     "pk": 4,
     "fields": {
-        "name": "Культура"
+        "name": "РљСѓР»СЊС‚СѓСЂР°"
     }
 },
 {
     "model": "news.topic",
     "pk": 5,
     "fields": {
-        "name": "Наука"
+        "name": "РќР°СѓРєР°"
     }
 },
 {
     "model": "news.topic",
     "pk": 6,
     "fields": {
-        "name": "Космос"
+        "name": "РљРѕСЃРјРѕСЃ"
     }
 },
 {
     "model": "news.newspaper",
     "pk": 1,
     "fields": {
-        "title": "Нові технологічні тренди 2024",
-        "description": "Огляд головних технологічних інновацій року",
-        "content": "Детальний опис технологічних трендів та їх вплив на майбутнє...",
+        "title": "РќРѕРІС– С‚РµС…РЅРѕР»РѕРіС–С‡РЅС– С‚СЂРµРЅРґРё 2024",
+        "description": "РћРіР»СЏРґ РіРѕР»РѕРІРЅРёС… С‚РµС…РЅРѕР»РѕРіС–С‡РЅРёС… С–РЅРЅРѕРІР°С†С–Р№ СЂРѕРєСѓ",
+        "content": "Р”РµС‚Р°Р»СЊРЅРёР№ РѕРїРёСЃ С‚РµС…РЅРѕР»РѕРіС–С‡РЅРёС… С‚СЂРµРЅРґС–РІ С‚Р° С—С… РІРїР»РёРІ РЅР° РјР°Р№Р±СѓС‚РЅС”...",
         "created_at": "2024-03-20T10:00:00Z",
         "updated_at": "2024-12-05T09:02:05.552Z",
         "image": "news_images/tecnologies.jpeg",
@@ -61,9 +61,9 @@
     "model": "news.newspaper",
     "pk": 2,
     "fields": {
-        "title": "Спортивні досягнення України",
-        "description": "Успіхи українських спортсменів на міжнародній арені",
-        "content": "Детальний огляд спортивних подій та перемог...",
+        "title": "РЎРїРѕСЂС‚РёРІРЅС– РґРѕСЃСЏРіРЅРµРЅРЅСЏ РЈРєСЂР°С—РЅРё",
+        "description": "РЈСЃРїС–С…Рё СѓРєСЂР°С—РЅСЃСЊРєРёС… СЃРїРѕСЂС‚СЃРјРµРЅС–РІ РЅР° РјС–Р¶РЅР°СЂРѕРґРЅС–Р№ Р°СЂРµРЅС–",
+        "content": "Р”РµС‚Р°Р»СЊРЅРёР№ РѕРіР»СЏРґ СЃРїРѕСЂС‚РёРІРЅРёС… РїРѕРґС–Р№ С‚Р° РїРµСЂРµРјРѕРі...",
         "created_at": "2024-03-19T15:30:00Z",
         "updated_at": "2024-03-19T15:30:00Z",
         "image": "news_images/img_2.jpg",
@@ -77,9 +77,9 @@
     "model": "news.newspaper",
     "pk": 3,
     "fields": {
-        "title": "Відкриття нової галереї сучасного мистецтва",
-        "description": "У центрі міста відкрилася інноваційна арт-галерея",
-        "content": "Детальний опис виставки та представлених робіт...",
+        "title": "Р’С–РґРєСЂРёС‚С‚СЏ РЅРѕРІРѕС— РіР°Р»РµСЂРµС— СЃСѓС‡Р°СЃРЅРѕРіРѕ РјРёСЃС‚РµС†С‚РІР°",
+        "description": "РЈ С†РµРЅС‚СЂС– РјС–СЃС‚Р° РІС–РґРєСЂРёР»Р°СЃСЏ С–РЅРЅРѕРІР°С†С–Р№РЅР° Р°СЂС‚-РіР°Р»РµСЂРµСЏ",
+        "content": "Р”РµС‚Р°Р»СЊРЅРёР№ РѕРїРёСЃ РІРёСЃС‚Р°РІРєРё С‚Р° РїСЂРµРґСЃС‚Р°РІР»РµРЅРёС… СЂРѕР±С–С‚...",
         "created_at": "2024-03-18T14:20:00Z",
         "updated_at": "2024-12-04T05:05:11.528Z",
         "image": "news_images/17.jpeg",
@@ -93,9 +93,9 @@
     "model": "news.newspaper",
     "pk": 4,
     "fields": {
-        "title": "Прорив у квантовій фізиці",
-        "description": "Українські вчені здійснили важливе відкриття",
-        "content": "Опис наукового відкриття та його значення...",
+        "title": "РџСЂРѕСЂРёРІ Сѓ РєРІР°РЅС‚РѕРІС–Р№ С„С–Р·РёС†С–",
+        "description": "РЈРєСЂР°С—РЅСЃСЊРєС– РІС‡РµРЅС– Р·РґС–Р№СЃРЅРёР»Рё РІР°Р¶Р»РёРІРµ РІС–РґРєСЂРёС‚С‚СЏ",
+        "content": "РћРїРёСЃ РЅР°СѓРєРѕРІРѕРіРѕ РІС–РґРєСЂРёС‚С‚СЏ С‚Р° Р№РѕРіРѕ Р·РЅР°С‡РµРЅРЅСЏ...",
         "created_at": "2024-03-17T11:00:00Z",
         "updated_at": "2024-03-17T11:00:00Z",
         "image": "news_images/img_4.jpg",
@@ -109,9 +109,9 @@
     "model": "news.newspaper",
     "pk": 5,
     "fields": {
-        "title": "Нові політичні реформи",
-        "description": "Парламент ухвалив пакет важливих законів",
-        "content": "Детальний аналіз прийнятих реформ...",
+        "title": "РќРѕРІС– РїРѕР»С–С‚РёС‡РЅС– СЂРµС„РѕСЂРјРё",
+        "description": "РџР°СЂР»Р°РјРµРЅС‚ СѓС…РІР°Р»РёРІ РїР°РєРµС‚ РІР°Р¶Р»РёРІРёС… Р·Р°РєРѕРЅС–РІ",
+        "content": "Р”РµС‚Р°Р»СЊРЅРёР№ Р°РЅР°Р»С–Р· РїСЂРёР№РЅСЏС‚РёС… СЂРµС„РѕСЂРј...",
         "created_at": "2024-03-16T09:15:00Z",
         "updated_at": "2024-12-04T05:01:07.008Z",
         "image": "news_images/politic.jpeg",
@@ -125,9 +125,9 @@
     "model": "news.newspaper",
     "pk": 6,
     "fields": {
-        "title": "Інновації в освіті",
-        "description": "Впровадження нових освітніх технологій",
-        "content": "Огляд змін в системі освіти...",
+        "title": "Р†РЅРЅРѕРІР°С†С–С— РІ РѕСЃРІС–С‚С–",
+        "description": "Р’РїСЂРѕРІР°РґР¶РµРЅРЅСЏ РЅРѕРІРёС… РѕСЃРІС–С‚РЅС–С… С‚РµС…РЅРѕР»РѕРіС–Р№",
+        "content": "РћРіР»СЏРґ Р·РјС–РЅ РІ СЃРёСЃС‚РµРјС– РѕСЃРІС–С‚Рё...",
         "created_at": "2024-03-15T16:45:00Z",
         "updated_at": "2024-03-15T16:45:00Z",
         "image": "news_images/img_6.jpg",
@@ -142,9 +142,9 @@
     "model": "news.newspaper",
     "pk": 7,
     "fields": {
-        "title": "Спортивний турнір року",
-        "description": "Підсумки міжнародних змагань",
-        "content": "Результати та найяскравіші моменти турніру...",
+        "title": "РЎРїРѕСЂС‚РёРІРЅРёР№ С‚СѓСЂРЅС–СЂ СЂРѕРєСѓ",
+        "description": "РџС–РґСЃСѓРјРєРё РјС–Р¶РЅР°СЂРѕРґРЅРёС… Р·РјР°РіР°РЅСЊ",
+        "content": "Р РµР·СѓР»СЊС‚Р°С‚Рё С‚Р° РЅР°Р№СЏСЃРєСЂР°РІС–С€С– РјРѕРјРµРЅС‚Рё С‚СѓСЂРЅС–СЂСѓ...",
         "created_at": "2024-03-14T13:30:00Z",
         "updated_at": "2024-12-04T04:57:57.642Z",
         "image": "news_images/SPORT.jpeg",
@@ -158,9 +158,9 @@
     "model": "news.newspaper",
     "pk": 8,
     "fields": {
-        "title": "Культурна спадщина",
-        "description": "Відновлення історичних пам'яток",
-        "content": "Проекти з реставрації історичних будівель...",
+        "title": "РљСѓР»СЊС‚СѓСЂРЅР° СЃРїР°РґС‰РёРЅР°",
+        "description": "Р’С–РґРЅРѕРІР»РµРЅРЅСЏ С–СЃС‚РѕСЂРёС‡РЅРёС… РїР°Рј'СЏС‚РѕРє",
+        "content": "РџСЂРѕРµРєС‚Рё Р· СЂРµСЃС‚Р°РІСЂР°С†С–С— С–СЃС‚РѕСЂРёС‡РЅРёС… Р±СѓРґС–РІРµР»СЊ...",
         "created_at": "2024-03-13T10:20:00Z",
         "updated_at": "2024-03-13T10:20:00Z",
         "image": "news_images/img_8.jpg",
@@ -174,9 +174,9 @@
     "model": "news.newspaper",
     "pk": 9,
     "fields": {
-        "title": "Технологічний стартап року",
-        "description": "Успіх української IT-компанії",
-        "content": "Історія розвитку та досягнення стартапу...",
+        "title": "РўРµС…РЅРѕР»РѕРіС–С‡РЅРёР№ СЃС‚Р°СЂС‚Р°Рї СЂРѕРєСѓ",
+        "description": "РЈСЃРїС–С… СѓРєСЂР°С—РЅСЃСЊРєРѕС— IT-РєРѕРјРїР°РЅС–С—",
+        "content": "Р†СЃС‚РѕСЂС–СЏ СЂРѕР·РІРёС‚РєСѓ С‚Р° РґРѕСЃСЏРіРЅРµРЅРЅСЏ СЃС‚Р°СЂС‚Р°РїСѓ...",
         "created_at": "2024-03-12T15:10:00Z",
         "updated_at": "2024-12-04T04:56:56.443Z",
         "image": "news_images/technologies1.jpeg",
@@ -190,9 +190,9 @@
     "model": "news.newspaper",
     "pk": 10,
     "fields": {
-        "title": "Міжнародна співпраця",
-        "description": "Нові економічні угоди",
-        "content": "Деталі міжнародних домовленостей...",
+        "title": "РњС–Р¶РЅР°СЂРѕРґРЅР° СЃРїС–РІРїСЂР°С†СЏ",
+        "description": "РќРѕРІС– РµРєРѕРЅРѕРјС–С‡РЅС– СѓРіРѕРґРё",
+        "content": "Р”РµС‚Р°Р»С– РјС–Р¶РЅР°СЂРѕРґРЅРёС… РґРѕРјРѕРІР»РµРЅРѕСЃС‚РµР№...",
         "created_at": "2024-03-11T12:00:00Z",
         "updated_at": "2024-03-11T12:00:00Z",
         "image": "news_images/img_10.jpg",
@@ -206,9 +206,9 @@
     "model": "news.newspaper",
     "pk": 11,
     "fields": {
-        "title": "Екологічні ініціативи",
-        "description": "Проекти захисту довкілля",
-        "content": "Нові програми збереження природи...",
+        "title": "Р•РєРѕР»РѕРіС–С‡РЅС– С–РЅС–С†С–Р°С‚РёРІРё",
+        "description": "РџСЂРѕРµРєС‚Рё Р·Р°С…РёСЃС‚Сѓ РґРѕРІРєС–Р»Р»СЏ",
+        "content": "РќРѕРІС– РїСЂРѕРіСЂР°РјРё Р·Р±РµСЂРµР¶РµРЅРЅСЏ РїСЂРёСЂРѕРґРё...",
         "created_at": "2024-03-10T09:45:00Z",
         "updated_at": "2024-03-10T09:45:00Z",
         "image": "news_images/img_11.jpg",
@@ -222,9 +222,9 @@
     "model": "news.newspaper",
     "pk": 12,
     "fields": {
-        "title": "Спортивні рекорди",
-        "description": "Нові досягнення атлетів",
-        "content": "Огляд встановлених рекордів...",
+        "title": "РЎРїРѕСЂС‚РёРІРЅС– СЂРµРєРѕСЂРґРё",
+        "description": "РќРѕРІС– РґРѕСЃСЏРіРЅРµРЅРЅСЏ Р°С‚Р»РµС‚С–РІ",
+        "content": "РћРіР»СЏРґ РІСЃС‚Р°РЅРѕРІР»РµРЅРёС… СЂРµРєРѕСЂРґС–РІ...",
         "created_at": "2024-03-09T14:30:00Z",
         "updated_at": "2024-03-09T14:30:00Z",
         "image": "news_images/img_12.jpg",
@@ -238,9 +238,9 @@
     "model": "news.newspaper",
     "pk": 13,
     "fields": {
-        "title": "Мистецький фестиваль",
-        "description": "Щорічна культурна подія",
-        "content": "Програма та учасники фестивалю...",
+        "title": "РњРёСЃС‚РµС†СЊРєРёР№ С„РµСЃС‚РёРІР°Р»СЊ",
+        "description": "Р©РѕСЂС–С‡РЅР° РєСѓР»СЊС‚СѓСЂРЅР° РїРѕРґС–СЏ",
+        "content": "РџСЂРѕРіСЂР°РјР° С‚Р° СѓС‡Р°СЃРЅРёРєРё С„РµСЃС‚РёРІР°Р»СЋ...",
         "created_at": "2024-03-08T11:20:00Z",
         "updated_at": "2024-12-04T05:05:43.647Z",
         "image": "news_images/culture1_ySsFxfA.jpeg",
@@ -254,9 +254,9 @@
     "model": "news.newspaper",
     "pk": 14,
     "fields": {
-        "title": "Цифрова трансформація",
-        "description": "Діджиталізація державних послуг",
-        "content": "Нові електронні сервіси для громадян...",
+        "title": "Р¦РёС„СЂРѕРІР° С‚СЂР°РЅСЃС„РѕСЂРјР°С†С–СЏ",
+        "description": "Р”С–РґР¶РёС‚Р°Р»С–Р·Р°С†С–СЏ РґРµСЂР¶Р°РІРЅРёС… РїРѕСЃР»СѓРі",
+        "content": "РќРѕРІС– РµР»РµРєС‚СЂРѕРЅРЅС– СЃРµСЂРІС–СЃРё РґР»СЏ РіСЂРѕРјР°РґСЏРЅ...",
         "created_at": "2024-03-07T16:15:00Z",
         "updated_at": "2024-03-07T16:15:00Z",
         "image": "news_images/img_14.jpg",
@@ -271,9 +271,9 @@
     "model": "news.newspaper",
     "pk": 15,
     "fields": {
-        "title": "Наукові дослідження",
-        "description": "Результати експедиції вчених",
-        "content": "Відкриття в галузі біології...",
+        "title": "РќР°СѓРєРѕРІС– РґРѕСЃР»С–РґР¶РµРЅРЅСЏ",
+        "description": "Р РµР·СѓР»СЊС‚Р°С‚Рё РµРєСЃРїРµРґРёС†С–С— РІС‡РµРЅРёС…",
+        "content": "Р’С–РґРєСЂРёС‚С‚СЏ РІ РіР°Р»СѓР·С– Р±С–РѕР»РѕРіС–С—...",
         "created_at": "2024-03-06T13:40:00Z",
         "updated_at": "2024-03-06T13:40:00Z",
         "image": "news_images/img_15.jpg",
@@ -287,9 +287,9 @@
     "model": "news.newspaper",
     "pk": 16,
     "fields": {
-        "title": "Спортивна медицина",
-        "description": "Інновації в реабілітації спортсменів",
-        "content": "Нові методи відновлення атлетів...",
+        "title": "РЎРїРѕСЂС‚РёРІРЅР° РјРµРґРёС†РёРЅР°",
+        "description": "Р†РЅРЅРѕРІР°С†С–С— РІ СЂРµР°Р±С–Р»С–С‚Р°С†С–С— СЃРїРѕСЂС‚СЃРјРµРЅС–РІ",
+        "content": "РќРѕРІС– РјРµС‚РѕРґРё РІС–РґРЅРѕРІР»РµРЅРЅСЏ Р°С‚Р»РµС‚С–РІ...",
         "created_at": "2024-03-05T10:30:00Z",
         "updated_at": "2024-03-05T10:30:00Z",
         "image": "news_images/img_16.jpg",
@@ -304,9 +304,9 @@
     "model": "news.newspaper",
     "pk": 17,
     "fields": {
-        "title": "Культурний обмін",
-        "description": "Міжнародна мистецька співпраця",
-        "content": "Проекти культурної дипломатії...",
+        "title": "РљСѓР»СЊС‚СѓСЂРЅРёР№ РѕР±РјС–РЅ",
+        "description": "РњС–Р¶РЅР°СЂРѕРґРЅР° РјРёСЃС‚РµС†СЊРєР° СЃРїС–РІРїСЂР°С†СЏ",
+        "content": "РџСЂРѕРµРєС‚Рё РєСѓР»СЊС‚СѓСЂРЅРѕС— РґРёРїР»РѕРјР°С‚С–С—...",
         "created_at": "2024-03-04T15:25:00Z",
         "updated_at": "2024-12-04T05:04:05.071Z",
         "image": "news_images/culture.jpeg",
@@ -320,9 +320,9 @@
     "model": "news.newspaper",
     "pk": 18,
     "fields": {
-        "title": "Технології майбутнього",
-        "description": "Прогнози розвитку IT-галузі",
-        "content": "Тенденції технологічного розвитку...",
+        "title": "РўРµС…РЅРѕР»РѕРіС–С— РјР°Р№Р±СѓС‚РЅСЊРѕРіРѕ",
+        "description": "РџСЂРѕРіРЅРѕР·Рё СЂРѕР·РІРёС‚РєСѓ IT-РіР°Р»СѓР·С–",
+        "content": "РўРµРЅРґРµРЅС†С–С— С‚РµС…РЅРѕР»РѕРіС–С‡РЅРѕРіРѕ СЂРѕР·РІРёС‚РєСѓ...",
         "created_at": "2024-03-03T12:15:00Z",
         "updated_at": "2024-03-03T12:15:00Z",
         "image": "news_images/img_18.jpg",
@@ -336,9 +336,9 @@
     "model": "news.newspaper",
     "pk": 19,
     "fields": {
-        "title": "Політичні реформи",
-        "description": "Зміни в законодавстві",
-        "content": "Аналіз нових законопроектів...",
+        "title": "РџРѕР»С–С‚РёС‡РЅС– СЂРµС„РѕСЂРјРё",
+        "description": "Р—РјС–РЅРё РІ Р·Р°РєРѕРЅРѕРґР°РІСЃС‚РІС–",
+        "content": "РђРЅР°Р»С–Р· РЅРѕРІРёС… Р·Р°РєРѕРЅРѕРїСЂРѕРµРєС‚С–РІ...",
         "created_at": "2024-03-02T09:10:00Z",
         "updated_at": "2024-12-04T04:59:39.961Z",
         "image": "news_images/politics.jpeg",
@@ -352,9 +352,9 @@
     "model": "news.newspaper",
     "pk": 20,
     "fields": {
-        "title": "Наукові інновації",
-        "description": "Прорив у дослідженнях",
-        "content": "Результати наукових експериментів...",
+        "title": "РќР°СѓРєРѕРІС– С–РЅРЅРѕРІР°С†С–С—",
+        "description": "РџСЂРѕСЂРёРІ Сѓ РґРѕСЃР»С–РґР¶РµРЅРЅСЏС…",
+        "content": "Р РµР·СѓР»СЊС‚Р°С‚Рё РЅР°СѓРєРѕРІРёС… РµРєСЃРїРµСЂРёРјРµРЅС‚С–РІ...",
         "created_at": "2024-03-01T14:05:00Z",
         "updated_at": "2024-03-01T14:05:00Z",
         "image": "news_images/img_20.jpg",
@@ -368,8 +368,8 @@
     "model": "news.newspaper",
     "pk": 22,
     "fields": {
-        "title": "Якась повна фігня",
-        "description": "Не люблю новини",
+        "title": "РЇРєР°СЃСЊ РїРѕРІРЅР° С„С–РіРЅСЏ",
+        "description": "РќРµ Р»СЋР±Р»СЋ РЅРѕРІРёРЅРё",
         "content": "Lorem ipsum odor amet, consectetuer adipiscing elit. Dignissim mollis vulputate vestibulum; facilisis morbi neque elit. Varius dignissim orci lacinia arcu quis lacus. Varius suscipit lacus; facilisi suspendisse purus phasellus vestibulum. Per phasellus fusce accumsan auctor ipsum sapien rhoncus at? Natoque habitant dignissim curae facilisis enim senectus. Fusce fusce adipiscing elit risus lacinia. Erat congue pulvinar proin senectus, at bibendum conubia.\r\n\r\nUt porttitor velit libero ornare suspendisse aliquet felis. Facilisi integer ante tristique semper tempus scelerisque litora auctor penatibus. Varius semper commodo porta erat pellentesque sit. Pulvinar vitae cras praesent vulputate; mus pellentesque penatibus class. Magnis sociosqu varius eu lacinia egestas lacinia proin nibh. Nulla ultricies facilisi sociosqu, aliquam dictumst duis ultrices. Arcu dolor non dolor auctor feugiat placerat. Netus ad non molestie nibh urna odio sit.\r\n\r\nEt cras pharetra nascetur mauris fusce ullamcorper elit. Ultricies accumsan potenti auctor primis, curabitur accumsan maximus natoque. Parturient natoque orci dolor; amet potenti massa et. Molestie hac cubilia cras sem tortor molestie, sit nisi potenti. Aenean tristique ante dolor in litora ligula rhoncus placerat dolor. Felis iaculis taciti gravida commodo conubia vestibulum montes elementum?\r\n\r\nPlatea fringilla vestibulum eros consequat ligula. Consectetur justo viverra ornare vulputate commodo vivamus adipiscing. Euismod mattis facilisis convallis ultricies potenti magna at. Aenean iaculis dui tortor cras elementum lectus vestibulum. Elit velit platea urna et accumsan rutrum convallis. Sollicitudin vel class efficitur facilisi cubilia elementum fringilla lorem. Montes suspendisse sodales nisi nisl porta magna natoque neque. Lectus phasellus pulvinar mi natoque purus volutpat erat. Vehicula bibendum venenatis facilisis magna dolor, inceptos platea eget.\r\n\r\nMus quisque nascetur vitae nisi lacinia. Sagittis potenti pharetra aliquam aptent donec sociosqu vel dapibus venenatis. Libero odio aliquet ut justo eu. Vestibulum placerat adipiscing hac gravida; a nisi euismod. Penatibus maximus fringilla lacinia; curabitur eros sem bibendum urna. Vitae non ad vel; scelerisque gravida mi tristique vulputate. Rhoncus mollis senectus id integer dis vestibulum eleifend. Elementum class vulputate ullamcorper per odio dis bibendum senectus.",
         "created_at": "2024-12-05T21:38:21.560Z",
         "updated_at": "2024-12-05T21:38:21.560Z",
@@ -389,7 +389,7 @@
         "password": "pbkdf2_sha256$870000$VblwJ1CIVqD3RfpziLL8GF$eYFrDrHkl4QHTqUTZLzuz2oO/xYSnbQeG2yoXmquGoE=",
         "last_login": "2024-12-05T21:36:52.349Z",
         "is_superuser": true,
-        "first_name": "Артем",
+        "first_name": "РђСЂС‚РµРј",
         "last_name": "Shatilov",
         "is_staff": true,
         "is_active": true,

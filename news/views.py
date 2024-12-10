@@ -3,8 +3,8 @@ from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import Q
 
-from news.models import Newspaper, Topic
-from news.forms import NewspaperForm, NewsSearchForm
+from .models import Newspaper, Topic
+from .forms import NewspaperForm, NewsSearchForm
 
 
 class IndexView(generic.ListView):
