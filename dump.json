@@ -1,0 +1,465 @@
+[
+{
+    "model": "news.topic",
+    "pk": 1,
+    "fields": {
+        "name": "Технології"
+    }
+},
+{
+    "model": "news.topic",
+    "pk": 2,
+    "fields": {
+        "name": "Спорт"
+    }
+},
+{
+    "model": "news.topic",
+    "pk": 3,
+    "fields": {
+        "name": "Політика"
+    }
+},
+{
+    "model": "news.topic",
+    "pk": 4,
+    "fields": {
+        "name": "Культура"
+    }
+},
+{
+    "model": "news.topic",
+    "pk": 5,
+    "fields": {
+        "name": "Наука"
+    }
+},
+{
+    "model": "news.topic",
+    "pk": 6,
+    "fields": {
+        "name": "Космос"
+    }
+},
+{
+    "model": "news.newspaper",
+    "pk": 1,
+    "fields": {
+        "title": "Нові технологічні тренди 2024",
+        "description": "Огляд головних технологічних інновацій року",
+        "content": "Детальний опис технологічних трендів та їх вплив на майбутнє...",
+        "created_at": "2024-03-20T10:00:00Z",
+        "updated_at": "2024-12-05T09:02:05.552Z",
+        "image": "news_images/tecnologies.jpeg",
+        "redactor": 1,
+        "topics": [
+            1
+        ]
+    }
+},
+{
+    "model": "news.newspaper",
+    "pk": 2,
+    "fields": {
+        "title": "Спортивні досягнення України",
+        "description": "Успіхи українських спортсменів на міжнародній арені",
+        "content": "Детальний огляд спортивних подій та перемог...",
+        "created_at": "2024-03-19T15:30:00Z",
+        "updated_at": "2024-03-19T15:30:00Z",
+        "image": "news_images/img_2.jpg",
+        "redactor": 1,
+        "topics": [
+            2
+        ]
+    }
+},
+{
+    "model": "news.newspaper",
+    "pk": 3,
+    "fields": {
+        "title": "Відкриття нової галереї сучасного мистецтва",
+        "description": "У центрі міста відкрилася інноваційна арт-галерея",
+        "content": "Детальний опис виставки та представлених робіт...",
+        "created_at": "2024-03-18T14:20:00Z",
+        "updated_at": "2024-12-04T05:05:11.528Z",
+        "image": "news_images/17.jpeg",
+        "redactor": 1,
+        "topics": [
+            4
+        ]
+    }
+},
+{
+    "model": "news.newspaper",
+    "pk": 4,
+    "fields": {
+        "title": "Прорив у квантовій фізиці",
+        "description": "Українські вчені здійснили важливе відкриття",
+        "content": "Опис наукового відкриття та його значення...",
+        "created_at": "2024-03-17T11:00:00Z",
+        "updated_at": "2024-03-17T11:00:00Z",
+        "image": "news_images/img_4.jpg",
+        "redactor": 1,
+        "topics": [
+            5
+        ]
+    }
+},
+{
+    "model": "news.newspaper",
+    "pk": 5,
+    "fields": {
+        "title": "Нові політичні реформи",
+        "description": "Парламент ухвалив пакет важливих законів",
+        "content": "Детальний аналіз прийнятих реформ...",
+        "created_at": "2024-03-16T09:15:00Z",
+        "updated_at": "2024-12-04T05:01:07.008Z",
+        "image": "news_images/politic.jpeg",
+        "redactor": 1,
+        "topics": [
+            3
+        ]
+    }
+},
+{
+    "model": "news.newspaper",
+    "pk": 6,
+    "fields": {
+        "title": "Інновації в освіті",
+        "description": "Впровадження нових освітніх технологій",
+        "content": "Огляд змін в системі освіти...",
+        "created_at": "2024-03-15T16:45:00Z",
+        "updated_at": "2024-03-15T16:45:00Z",
+        "image": "news_images/img_6.jpg",
+        "redactor": 1,
+        "topics": [
+            1,
+            5
+        ]
+    }
+},
+{
+    "model": "news.newspaper",
+    "pk": 7,
+    "fields": {
+        "title": "Спортивний турнір року",
+        "description": "Підсумки міжнародних змагань",
+        "content": "Результати та найяскравіші моменти турніру...",
+        "created_at": "2024-03-14T13:30:00Z",
+        "updated_at": "2024-12-04T04:57:57.642Z",
+        "image": "news_images/SPORT.jpeg",
+        "redactor": 1,
+        "topics": [
+            2
+        ]
+    }
+},
+{
+    "model": "news.newspaper",
+    "pk": 8,
+    "fields": {
+        "title": "Культурна спадщина",
+        "description": "Відновлення історичних пам'яток",
+        "content": "Проекти з реставрації історичних будівель...",
+        "created_at": "2024-03-13T10:20:00Z",
+        "updated_at": "2024-03-13T10:20:00Z",
+        "image": "news_images/img_8.jpg",
+        "redactor": 1,
+        "topics": [
+            4
+        ]
+    }
+},
+{
+    "model": "news.newspaper",
+    "pk": 9,
+    "fields": {
+        "title": "Технологічний стартап року",
+        "description": "Успіх української IT-компанії",
+        "content": "Історія розвитку та досягнення стартапу...",
+        "created_at": "2024-03-12T15:10:00Z",
+        "updated_at": "2024-12-04T04:56:56.443Z",
+        "image": "news_images/technologies1.jpeg",
+        "redactor": 1,
+        "topics": [
+            1
+        ]
+    }
+},
+{
+    "model": "news.newspaper",
+    "pk": 10,
+    "fields": {
+        "title": "Міжнародна співпраця",
+        "description": "Нові економічні угоди",
+        "content": "Деталі міжнародних домовленостей...",
+        "created_at": "2024-03-11T12:00:00Z",
+        "updated_at": "2024-03-11T12:00:00Z",
+        "image": "news_images/img_10.jpg",
+        "redactor": 1,
+        "topics": [
+            3
+        ]
+    }
+},
+{
+    "model": "news.newspaper",
+    "pk": 11,
+    "fields": {
+        "title": "Екологічні ініціативи",
+        "description": "Проекти захисту довкілля",
+        "content": "Нові програми збереження природи...",
+        "created_at": "2024-03-10T09:45:00Z",
+        "updated_at": "2024-03-10T09:45:00Z",
+        "image": "news_images/img_11.jpg",
+        "redactor": 1,
+        "topics": [
+            5
+        ]
+    }
+},
+{
+    "model": "news.newspaper",
+    "pk": 12,
+    "fields": {
+        "title": "Спортивні рекорди",
+        "description": "Нові досягнення атлетів",
+        "content": "Огляд встановлених рекордів...",
+        "created_at": "2024-03-09T14:30:00Z",
+        "updated_at": "2024-03-09T14:30:00Z",
+        "image": "news_images/img_12.jpg",
+        "redactor": 1,
+        "topics": [
+            2
+        ]
+    }
+},
+{
+    "model": "news.newspaper",
+    "pk": 13,
+    "fields": {
+        "title": "Мистецький фестиваль",
+        "description": "Щорічна культурна подія",
+        "content": "Програма та учасники фестивалю...",
+        "created_at": "2024-03-08T11:20:00Z",
+        "updated_at": "2024-12-04T05:05:43.647Z",
+        "image": "news_images/culture1_ySsFxfA.jpeg",
+        "redactor": 1,
+        "topics": [
+            4
+        ]
+    }
+},
+{
+    "model": "news.newspaper",
+    "pk": 14,
+    "fields": {
+        "title": "Цифрова трансформація",
+        "description": "Діджиталізація державних послуг",
+        "content": "Нові електронні сервіси для громадян...",
+        "created_at": "2024-03-07T16:15:00Z",
+        "updated_at": "2024-03-07T16:15:00Z",
+        "image": "news_images/img_14.jpg",
+        "redactor": 1,
+        "topics": [
+            1,
+            3
+        ]
+    }
+},
+{
+    "model": "news.newspaper",
+    "pk": 15,
+    "fields": {
+        "title": "Наукові дослідження",
+        "description": "Результати експедиції вчених",
+        "content": "Відкриття в галузі біології...",
+        "created_at": "2024-03-06T13:40:00Z",
+        "updated_at": "2024-03-06T13:40:00Z",
+        "image": "news_images/img_15.jpg",
+        "redactor": 1,
+        "topics": [
+            5
+        ]
+    }
+},
+{
+    "model": "news.newspaper",
+    "pk": 16,
+    "fields": {
+        "title": "Спортивна медицина",
+        "description": "Інновації в реабілітації спортсменів",
+        "content": "Нові методи відновлення атлетів...",
+        "created_at": "2024-03-05T10:30:00Z",
+        "updated_at": "2024-03-05T10:30:00Z",
+        "image": "news_images/img_16.jpg",
+        "redactor": 1,
+        "topics": [
+            2,
+            5
+        ]
+    }
+},
+{
+    "model": "news.newspaper",
+    "pk": 17,
+    "fields": {
+        "title": "Культурний обмін",
+        "description": "Міжнародна мистецька співпраця",
+        "content": "Проекти культурної дипломатії...",
+        "created_at": "2024-03-04T15:25:00Z",
+        "updated_at": "2024-12-04T05:04:05.071Z",
+        "image": "news_images/culture.jpeg",
+        "redactor": 1,
+        "topics": [
+            4
+        ]
+    }
+},
+{
+    "model": "news.newspaper",
+    "pk": 18,
+    "fields": {
+        "title": "Технології майбутнього",
+        "description": "Прогнози розвитку IT-галузі",
+        "content": "Тенденції технологічного розвитку...",
+        "created_at": "2024-03-03T12:15:00Z",
+        "updated_at": "2024-03-03T12:15:00Z",
+        "image": "news_images/img_18.jpg",
+        "redactor": 1,
+        "topics": [
+            1
+        ]
+    }
+},
+{
+    "model": "news.newspaper",
+    "pk": 19,
+    "fields": {
+        "title": "Політичні реформи",
+        "description": "Зміни в законодавстві",
+        "content": "Аналіз нових законопроектів...",
+        "created_at": "2024-03-02T09:10:00Z",
+        "updated_at": "2024-12-04T04:59:39.961Z",
+        "image": "news_images/politics.jpeg",
+        "redactor": 1,
+        "topics": [
+            3
+        ]
+    }
+},
+{
+    "model": "news.newspaper",
+    "pk": 20,
+    "fields": {
+        "title": "Наукові інновації",
+        "description": "Прорив у дослідженнях",
+        "content": "Результати наукових експериментів...",
+        "created_at": "2024-03-01T14:05:00Z",
+        "updated_at": "2024-03-01T14:05:00Z",
+        "image": "news_images/img_20.jpg",
+        "redactor": 1,
+        "topics": [
+            5
+        ]
+    }
+},
+{
+    "model": "news.newspaper",
+    "pk": 22,
+    "fields": {
+        "title": "Якась повна фігня",
+        "description": "Не люблю новини",
+        "content": "Lorem ipsum odor amet, consectetuer adipiscing elit. Dignissim mollis vulputate vestibulum; facilisis morbi neque elit. Varius dignissim orci lacinia arcu quis lacus. Varius suscipit lacus; facilisi suspendisse purus phasellus vestibulum. Per phasellus fusce accumsan auctor ipsum sapien rhoncus at? Natoque habitant dignissim curae facilisis enim senectus. Fusce fusce adipiscing elit risus lacinia. Erat congue pulvinar proin senectus, at bibendum conubia.\r\n\r\nUt porttitor velit libero ornare suspendisse aliquet felis. Facilisi integer ante tristique semper tempus scelerisque litora auctor penatibus. Varius semper commodo porta erat pellentesque sit. Pulvinar vitae cras praesent vulputate; mus pellentesque penatibus class. Magnis sociosqu varius eu lacinia egestas lacinia proin nibh. Nulla ultricies facilisi sociosqu, aliquam dictumst duis ultrices. Arcu dolor non dolor auctor feugiat placerat. Netus ad non molestie nibh urna odio sit.\r\n\r\nEt cras pharetra nascetur mauris fusce ullamcorper elit. Ultricies accumsan potenti auctor primis, curabitur accumsan maximus natoque. Parturient natoque orci dolor; amet potenti massa et. Molestie hac cubilia cras sem tortor molestie, sit nisi potenti. Aenean tristique ante dolor in litora ligula rhoncus placerat dolor. Felis iaculis taciti gravida commodo conubia vestibulum montes elementum?\r\n\r\nPlatea fringilla vestibulum eros consequat ligula. Consectetur justo viverra ornare vulputate commodo vivamus adipiscing. Euismod mattis facilisis convallis ultricies potenti magna at. Aenean iaculis dui tortor cras elementum lectus vestibulum. Elit velit platea urna et accumsan rutrum convallis. Sollicitudin vel class efficitur facilisi cubilia elementum fringilla lorem. Montes suspendisse sodales nisi nisl porta magna natoque neque. Lectus phasellus pulvinar mi natoque purus volutpat erat. Vehicula bibendum venenatis facilisis magna dolor, inceptos platea eget.\r\n\r\nMus quisque nascetur vitae nisi lacinia. Sagittis potenti pharetra aliquam aptent donec sociosqu vel dapibus venenatis. Libero odio aliquet ut justo eu. Vestibulum placerat adipiscing hac gravida; a nisi euismod. Penatibus maximus fringilla lacinia; curabitur eros sem bibendum urna. Vitae non ad vel; scelerisque gravida mi tristique vulputate. Rhoncus mollis senectus id integer dis vestibulum eleifend. Elementum class vulputate ullamcorper per odio dis bibendum senectus.",
+        "created_at": "2024-12-05T21:38:21.560Z",
+        "updated_at": "2024-12-05T21:38:21.560Z",
+        "image": "news_images/pexels-ahmedadly-1270184_bJgHVdy.webp",
+        "redactor": 1,
+        "topics": [
+            1,
+            4,
+            5
+        ]
+    }
+},
+{
+    "model": "accounts.redactor",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$VblwJ1CIVqD3RfpziLL8GF$eYFrDrHkl4QHTqUTZLzuz2oO/xYSnbQeG2yoXmquGoE=",
+        "last_login": "2024-12-05T21:36:52.349Z",
+        "is_superuser": true,
+        "first_name": "Артем",
+        "last_name": "Shatilov",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-12-04T02:21:32.990Z",
+        "years_of_experience": 10,
+        "username": "admin.admin",
+        "email": "admin@admin.com",
+        "profile_image": "profile_images/logo_3fnYDio.webp",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "accounts.redactor",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$hashed_password123",
+        "last_login": "2024-03-20T10:00:00Z",
+        "is_superuser": true,
+        "first_name": "Admin",
+        "last_name": "User",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-03-20T10:00:00Z",
+        "years_of_experience": 5,
+        "username": "admin",
+        "email": "admin@example.com",
+        "profile_image": "profile_images/no-avatar.png",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "accounts.redactor",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$hashed_password456",
+        "last_login": "2024-03-20T10:00:00Z",
+        "is_superuser": false,
+        "first_name": "John",
+        "last_name": "Doe",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-03-20T10:00:00Z",
+        "years_of_experience": 3,
+        "username": "john_doe",
+        "email": "john@example.com",
+        "profile_image": "profile_images/no-avatar.png",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "accounts.redactor",
+    "pk": 6,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$XenwI25aT7dbSjIIjWXpGt$WHyd/5F/xo0kkO04I2Fdy3IqEtg3nLgzKPjmLyQAzEE=",
+        "last_login": "2024-12-05T21:23:51.982Z",
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-12-05T21:23:24.845Z",
+        "years_of_experience": 0,
+        "username": "test",
+        "email": "test@test.com",
+        "profile_image": "profile_images/no-avatar.png",
+        "groups": [],
+        "user_permissions": []
+    }
+}
+]

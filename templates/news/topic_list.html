@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Topics
+{% endblock %}
+
+{% block page_title %}
+  Теми
+{% endblock %}
+
+{% block content %}
+  <div class="item" style="cursor: pointer; background-color: #ef5353; color: #fff;" onclick="window.location.href='{% url 'news:topic-create' %}'">
+    <br />
+    <div style="text-align: center;" class="animate-box">
+      <i class="icon-plus"></i>Створити нову тему
+    </div>
+    <br />
+  </div>
+  {% for topic in topics %}
+    <div class="item" onclick="window.location.href='{% url 'news:topic-detail' topic.pk %}'">
+      <br />
+      <div style="text-align: center;" class="animate-box">{{ topic.name }}</div>
+      <br />
+    </div>
+  {% endfor %}
+{% endblock %}
