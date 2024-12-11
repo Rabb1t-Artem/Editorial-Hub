@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+{% if form.instance.pk %}Редагувати новину{% else %}Створити новину{% endif %}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="news-detail">
+        {% if form.instance.image %}
+        <img src="{{ form.instance.image.url }}" class="news-image" alt="Preview">
+        {% endif %}
+        
+        <h1 class="fh5co-heading-colored">
+            {% if form.instance.pk %}Редагувати новину{% else %}Створити новину{% endif %}
+        </h1>
+
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            
+            <div class="news-content">
+                {{ form|crispy }}
+            </div>
+
+            <div class="news-actions mt-4">
+                <button type="submit" class="btn btn-primary">
+                    <i class="icon-check"></i> 
+                    {% if form.instance.pk %}Зберегти зміни{% else %}Створити новину{% endif %}
+                </button>
+                <a href="{% url 'news:my_news' %}" class="btn btn-outline-secondary">
+                    <i class="icon-close"></i> Скасувати
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %} 

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="text-center mt-3">
+    <h1>Видалити тему</h1>
+    <p>Ви впевнені, що хочете видалити тему "{{ topic.name }}"?</p>
+    <form method="post">
+      {% csrf_token %}
+      <button type="submit" class="btn btn-danger">Видалити</button>
+    </form>
+    <a href="{% url 'news:topic-list' %}" class="btn btn-secondary">Скасувати</a>
+  </div>
+{% endblock %}

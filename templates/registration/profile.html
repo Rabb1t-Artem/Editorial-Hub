@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Profile - {{ user.username }}{% endblock %}
+
+{% block page_title %}
+  Профіль
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="profile-container">
+        <div class="profile-header">
+            <div class="profile-avatar">
+                <img src="{{ user.profile_image.url|default:'/static/images/no-avatar.png' }}" 
+                     alt="Profile" 
+                     class="profile-img-large">
+            </div>
+            <div class="profile-info">
+                <h2>{{ user.username }}</h2>
+                <p class="text-muted">{{ user.email }}</p>
+                <p>Досвід: {{ user.years_of_experience }} років</p>
+            </div>
+        </div>
+
+        <div class="profile-details">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Особисті дані</h4>
+                    <p><strong>Ім'я:</strong> {{ user.first_name|default:"Не вказано" }}</p>
+                    <p><strong>Прізвище:</strong> {{ user.last_name|default:"Не вказано" }}</p>
+                    <p><strong>Email:</strong> {{ user.email }}</p>
+                </div>
+                <div class="col-md-6">
+                    <h4>Інформація про акаунт</h4>
+                    <p><strong>Ім'я користувача:</strong> {{ user.username }}</p>
+                    <p><strong>Дата приєднання:</strong> {{ user.date_joined|date:"F d, Y" }}</p>
+                    <p><strong>Роки досвіду:</strong> {{ user.years_of_experience }}</p>
+                    <p><strong>Кількість статей:</strong> {{ user.articles.count|default:"0" }}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-actions">
+            <a href="{% url 'accounts:profile_edit' %}" class="btn btn-primary">Редагувати профіль</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
