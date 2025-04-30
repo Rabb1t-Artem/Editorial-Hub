@@ -1,0 +1,106 @@
+/* Стилі для хедера та логотипу */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-content .logo-wrapper {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+}
+
+.header-content .header-logo {
+    max-height: 150px !important;
+    width: auto;
+}
+
+/* Стилі для блоку авторизації */
+.auth-block {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.username {
+    font-weight: 500;
+    color: #333;
+    font-size: 16px;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.auth-buttons .btn {
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.auth-buttons .btn-outline-primary {
+    border-color: #EF5353;
+    color: #EF5353;
+}
+
+.auth-buttons .btn-primary {
+    background-color: #EF5353;
+    border-color: #EF5353;
+}
+
+.logout-form {
+    text-align: center;
+    padding-top: 5px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logout-form .btn-outline-danger {
+    border-color: #dc3545;
+    color: #dc3545;
+    width: 100%;
+    max-width: 150px;
+}
+
+.logout-form .btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .header-content .header-logo {
+        max-height: 120px !important;
+    }
+    
+    .auth-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .auth-buttons .btn {
+        width: 100%;
+    }
+    
+    .logout-form .btn-outline-danger {
+        max-width: 100%;
+    }
+} 

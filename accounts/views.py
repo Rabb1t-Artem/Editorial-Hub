@@ -1,0 +1,39 @@
+from django.urls import reverse_lazy
+from django.views.generic import CreateView, UpdateView, DetailView
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth import login
+
+from .models import Redactor
+from .forms import UserRegistrationForm, UserProfileEditForm
+
+
+class UserRegisterView(CreateView):
+    model = Redactor
+    form_class = UserRegistrationForm
+    template_name = "registration/register.html"
+    success_url = reverse_lazy("news:index")
+
+    def form_valid(self, form):
+        response = super().form_valid(form)
+        login(self.request, self.object)
+        return response
+
+
+class UserProfileView(LoginRequiredMixin, DetailView):
+    model = Redactor
+    fields = ["first_name", "last_name", "email", "years_of_experience"]
+    template_name = "registration/profile.html"
+    success_url = reverse_lazy("profile")
+
+    def get_object(self, queryset=None):
+        return self.request.user
+
+
+class UserProfileEditView(LoginRequiredMixin, UpdateView):
+    model = Redactor
+    form_class = UserProfileEditForm
+    template_name = "registration/profile_edit.html"
+    success_url = reverse_lazy("accounts:profile")
+
+    def get_object(self, queryset=None):
+        return self.request.user
